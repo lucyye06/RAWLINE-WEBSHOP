@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAWLINE Clothing</title>
+  <link rel="stylesheet" href="lucy.css">
+</head>
+<body class="home-page">
+
+<!-- HEADER -->
+<header>
+  <h1><span class="raw-red">RAW</span>LINE</h1>
+  <div class="social-icons">
+       
+    </div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#categories">Categories</a>
+    <a href="#" onclick="openContact()">Contact</a>
+    <a href="#" onclick="openAuth()">Log-In</a>
+  </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section id="home" class="home-hero">
+  <div class="home-overlay">
+    <h1>
+      WEAR<br>
+      THE<br>
+      <p style="color: rgb(225, 10, 10);">REAL</p>
+    </h1>
+  <p class="hero-text"><wear the real.</p>
+    <a href="#categories" class="shop-now-btn">Shop Now</a>
+  </div>
+</section>
+
+<section id="about" class="about-section fade">
+   
+
+  <section id="about" class="about-section fade">
+  <div class="about-overlay">
+    <h2>ABOUT <span class="raw-red">RAW</span>LINE</h2>
+
+    <div class="about-box">
+      <p>
+        RAWLINE is a modern streetwear brand that celebrates individuality, confidence, and bold creativity. Inspired by urban 
+        culture and minimalist design, our clothing empowers you to express yourself effortlessly—whether through classic staples oredgy statement pieces.
+         Every piece we create is crafted for those who wear simplicity with attitude, making your style unapologetically yours.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- IMAGE -->
+    <div class="about-image">
+      <img src="street1.jpg" alt="RAWLINE streetwear">
+    </div>
+  </div>
+</section>
+
+<div id="toast" class="toast hidden">Added to your cart!</div>
+
+<!-- CATEGORIES & PRODUCTS -->
+<section id="categories" class="fade">
+  <h2> <span class="raw-red">RAW</span>LINE CATEGORIES</h2>
+
+  <div class="category-buttons">
+    <button onclick="filter('jorts')">Jorts</button>
+    <button onclick="filter('pants')">Pants</button>
+    <button onclick="filter('tshirt')">T-Shirt</button>
+    <button onclick="filter('hoodie')">Hoodie</button>
+    <button onclick="filter('cap')">Cap</button>
+    <button onclick="filter('all')">Show All</button>
+  </div>
+
+  <div class="products">
+  <!-- JORTS -->
+  <div class="product jorts">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/jorts1.jpg" alt="Jorts Classic Blue">
+    <h4 class="product-name">Jorts Classic Blue</h4>
+    <p>₱899</p>
+
+    <button>Add to Cart</button>
+  </div>
+  <div class="product jorts">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/jorts2.jpg" alt="Jorts Black Denim">
+    <h4 class="product-name">Jorts Black Denim</h4>
+    <p>₱899</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product jorts">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/jorts3.jpg" alt="Jorts Ripped">
+    <h4 class="product-name">Jorts Ripped</h4>
+    <p>₱899</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product jorts">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/jorts4.jpg" alt="Jorts Light Blue">
+    <h4 class="product-name">Jorts Light Blue</h4>
+    <p>₱899</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product jorts">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/jorts5.jpg" alt="Jorts Denim Black">
+    <h4 class="product-name">Jorts Denim Black</h4>
+    <p>₱899</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product jorts">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/jorts6.jpg" alt="Jorts White">
+    <h4 class="product-name">Jorts White</h4>
+    <p>₱899</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <!-- PANTS -->
+  <div class="product pants">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/pants1.jpg" alt="Street Pants Black">
+    <h4 class="product-name">Street Pants Black</h4>
+    <p>₱1199</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product pants">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/pants2.jpg" alt="Street Pants Grey">
+    <h4 class="product-name">Street Pants Grey</h4>
+    <p>₱1199</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product pants">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/pants3.jpg" alt="Street Pants Blue">
+    <h4 class="product-name">Street Pants Blue</h4>
+    <p>₱1199</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product pants">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/pants4.jpg" alt="Street Pants Black Slim">
+    <h4 class="product-name">Street Pants Black Slim</h4>
+    <p>₱1199</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product pants">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/pants5.jpg" alt="Street Pants Grey Slim">
+    <h4 class="product-name">Street Pants Grey Slim</h4>
+    <p>₱1199</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product pants">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/pants6.jpg" alt="Street Pants Blue Slim">
+    <h4 class="product-name">Street Pants Blue Slim</h4>
+    <p>₱1199</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <!-- T-SHIRT -->
+  <div class="product tshirt">
+    <span class="tag">BEST SELLER</span>
+    <img src="clothes.jpg" alt="RAWLINE Tee Red">
+    <h4 class="product-name">RAWLINE Tee Red</h4>
+    <p>₱599</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product tshirt">
+    <span class="tag">BEST SELLER</span>
+    <img src="clothess.webp" alt="RAWLINE Tee Black">
+    <h4 class="product-name">RAWLINE Tee Black</h4>
+    <p>₱599</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product tshirt">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/tshirt3.jpg" alt="RAWLINE Tee White">
+    <h4 class="product-name">RAWLINE Tee White</h4>
+    <p>₱599</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product tshirt">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/tshirt4.jpg" alt="RAWLINE Tee Grey">
+    <h4 class="product-name">RAWLINE Tee Grey</h4>
+    <p>₱599</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product tshirt">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/tshirt5.jpg" alt="RAWLINE Tee Green">
+    <h4 class="product-name">RAWLINE Tee Green</h4>
+    <p>₱599</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product tshirt">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/tshirt6.jpg" alt="RAWLINE Tee Blue">
+    <h4 class="product-name">RAWLINE Tee Blue</h4>
+    <p>₱599</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <!-- HOODIE -->
+  <div class="product hoodie">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/hoodie1.jpg" alt="RAWLINE Hoodie Grey">
+    <h4 class="product-name">RAWLINE Hoodie Grey</h4>
+    <p>₱1499</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product hoodie">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/hoodie2.jpg" alt="RAWLINE Hoodie Black">
+    <h4 class="product-name">RAWLINE Hoodie Black</h4>
+    <p>₱1499</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product hoodie">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/hoodie3.jpg" alt="RAWLINE Hoodie Red">
+    <h4 class="product-name">RAWLINE Hoodie Red</h4>
+    <p>₱1499</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product hoodie">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/hoodie4.jpg" alt="RAWLINE Hoodie Grey Black">
+    <h4 class="product-name">RAWLINE Hoodie Grey Black</h4>
+    <p>₱1499</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product hoodie">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/hoodie5.jpg" alt="RAWLINE Hoodie Navy">
+    <h4 class="product-name">RAWLINE Hoodie Navy</h4>
+    <p>₱1499</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product hoodie">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/hoodie6.jpg" alt="RAWLINE Hoodie Green">
+    <h4 class="product-name">RAWLINE Hoodie Green</h4>
+    <p>₱1499</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <!-- CAP -->
+  <div class="product cap">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/cap1.jpg" alt="RAWLINE Cap Black">
+    <h4 class="product-name">RAWLINE Cap Black</h4>
+    <p>₱399</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product cap">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/cap2.jpg" alt="RAWLINE Cap White">
+    <h4 class="product-name">RAWLINE Cap White</h4>
+    <p>₱399</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product cap">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/cap3.jpg" alt="RAWLINE Cap Black Red">
+    <h4 class="product-name">RAWLINE Cap Black Red</h4>
+    <p>₱399</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product cap">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/cap4.jpg" alt="RAWLINE Cap Grey">
+    <h4 class="product-name">RAWLINE Cap Grey</h4>
+    <p>₱399</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product cap">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/cap5.jpg" alt="RAWLINE Cap Blue">
+    <h4 class="product-name">RAWLINE Cap Blue</h4>
+    <p>₱399</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="product cap">
+    <span class="tag">BEST SELLER</span>
+    <img src="images/cap6.jpg" alt="RAWLINE Cap Red">
+    <h4 class="product-name">RAWLINE Cap Red</h4>
+    <p>₱399</p>
+    <button>Add to Cart</button>
+  </div>
+</div>
+<div id="auth" class="modal hidden">
+  <div class="login-card">
+
+    <!-- LOGIN SECTION -->
+    <form id="loginSection">
+      <h2 style="color: rgb(244, 243, 243);">Log In</h2>
+      <p class="login-sub">Connect with your RAWLINE account</p>
+
+      <input type="email" id="loginEmail" placeholder="Email address" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+
+      <a href="#" class="forgot-password">Forgot Password?</a>
+
+      <button type="submit" class="login-btn">Log In</button>
+
+      <p class="or-divider">OR</p>
+
+      <button type="button" class="signup-btn" onclick="showSignup()">
+        Create New Account
+      </button>
+    </form>
+
+    <!-- SIGN UP SECTION -->
+    <form id="signupSection" class="hidden">
+      <h2 style="color: black;">Sign Up</h2>
+      <p class="login-sub">Create your RAWLINE account</p>
+
+      <input type="email" id="signupEmail" placeholder="Email address" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+
+      <button type="submit" class="login-btn">Sign Up</button>
+
+      <p class="or-divider">OR</p>
+
+      <button type="button" class="signup-btn" onclick="showLogin()">
+        Back to Log In
+      </button>
+    </form>
+
+    <span class="close" onclick="closeModal()">×</span>
+  </div>
+</div>
+
+
+<!-- CONTACT MODAL -->
+<div id="contact" class="modal hidden">
+  <div class="contact-card">
+    <span class="close-contact" onclick="closeModal()">×</span>
+    <h2>Contact Us</h2>
+    <p class="contact-sub">Send us your concerns and we'll get back to you!</p>
+
+    <form id="contactForm">
+      <input type="text" id="contactName" placeholder="Your Name" required>
+      <input type="email" id="contactEmail" placeholder="Your Email" required>
+      <textarea id="contactMessage" placeholder="Your Message" required></textarea>
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+
+<!-- Social Media Icons -->
+<div class="contact-socials">
+  <a href="https://facebook.com" target="_blank">
+    <img src="fb1.png" alt="Facebook">
+  </a>
+  <a href="https://instagram.com" target="_blank">
+    <img src="ig.png" alt="Instagram">
+  </a>
+  <a href="https://twitter.com" target="_blank">
+    <img src="twit.webp" alt="Twitter">
+  </a>
+</div>
+
+  </div>
+</div>
+<!-- Toast for Contact Submission -->
+<div id="contactToast" class="toast hidden">Message sent successfully!</div>
+
+ 
+
+<script src="script.js"></script>
+</body>
