@@ -1097,3 +1097,49 @@ nav a:hover {
     font-size: 13px;
   }
 }
+
+/* =========================================
+   FINAL MOBILE FIX PATCH
+   ========================================= */
+
+/* prevent right scroll gap */
+html, body{
+  overflow-x:hidden;
+  width:100%;
+}
+
+/* ABOUT SECTION IMAGE + TEXT STACK */
+@media screen and (max-width:768px){
+
+  .about-overlay{
+    max-width:100%;
+    padding:20px 15px;
+  }
+
+  .about-section{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .about-box{
+    max-width:100%;
+    font-size:15px;
+  }
+
+}
+
+/* EXTRA SMALL PHONES */
+@media screen and (max-width:480px){
+
+  .about-overlay h2{
+    font-size:22px;
+  }
+
+  .about-box{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+}
+
+
