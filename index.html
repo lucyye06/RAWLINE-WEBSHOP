@@ -25,6 +25,7 @@
   </nav>
 </header>
 
+
 <!-- HERO SECTION -->
 <section id="home" class="home-hero">
   <div class="home-overlay">
@@ -33,14 +34,18 @@
       THE<br>
       <p style="color: rgb(225, 10, 10);">REAL</p>
     </h1>
-    <p class="hero-text"><wear the real.</p>
+  <p class="hero-text"><wear the real.</p>
     <a href="#categories" class="shop-now-btn">Shop Now</a>
   </div>
 </section>
 
 <section id="about" class="about-section fade">
+   
+
+  <section id="about" class="about-section fade">
   <div class="about-overlay">
     <h2>ABOUT <span class="raw-red">RAW</span>LINE</h2>
+
     <div class="about-box">
       <p>
         RAWLINE is a modern streetwear brand that celebrates individuality, confidence, and bold creativity. Inspired by urban 
@@ -49,14 +54,16 @@
       </p>
     </div>
   </div>
+</section>
 
-  <div class="about-image">
-    <img src="street1.jpg" alt="RAWLINE streetwear">
+    <!-- IMAGE -->
+    <div class="about-image">
+      <img src="street1.jpg" alt="RAWLINE streetwear">
+    </div>
   </div>
 </section>
 
 <div id="toast" class="toast hidden">Added to your cart!</div>
-
 
 <!-- CATEGORIES & PRODUCTS -->
 <section id="categories" class="fade">
@@ -296,9 +303,7 @@
 <div id="auth" class="modal hidden">
   <div class="login-card">
 
-  <!-- AUTH MODAL -->
-<div id="auth" class="modal hidden">
-  <div class="login-card">
+    <!-- LOGIN SECTION -->
     <form id="loginSection">
       <h2 style="color: rgb(244, 243, 243);">Log In</h2>
       <p class="login-sub">Connect with your RAWLINE account</p>
@@ -307,13 +312,17 @@
       <input type="password" id="loginPassword" placeholder="Password" required>
 
       <a href="#" class="forgot-password">Forgot Password?</a>
+
       <button type="submit" class="login-btn">Log In</button>
 
       <p class="or-divider">OR</p>
 
-      <button type="button" class="signup-btn" onclick="showSignup()">Create New Account</button>
+      <button type="button" class="signup-btn" onclick="showSignup()">
+        Create New Account
+      </button>
     </form>
 
+    <!-- SIGN UP SECTION -->
     <form id="signupSection" class="hidden">
       <h2 style="color: black;">Sign Up</h2>
       <p class="login-sub">Create your RAWLINE account</p>
@@ -322,14 +331,18 @@
       <input type="password" id="signupPassword" placeholder="Password" required>
 
       <button type="submit" class="login-btn">Sign Up</button>
+
       <p class="or-divider">OR</p>
 
-      <button type="button" class="signup-btn" onclick="showLogin()">Back to Log In</button>
+      <button type="button" class="signup-btn" onclick="showLogin()">
+        Back to Log In
+      </button>
     </form>
 
     <span class="close" onclick="closeModal()">×</span>
   </div>
 </div>
+
 
 <!-- CONTACT MODAL -->
 <div id="contact" class="modal hidden">
@@ -337,24 +350,33 @@
     <span class="close-contact" onclick="closeModal()">×</span>
     <h2>Contact Us</h2>
     <p class="contact-sub">Send us your concerns and we'll get back to you!</p>
+
     <form id="contactForm">
       <input type="text" id="contactName" placeholder="Your Name" required>
       <input type="email" id="contactEmail" placeholder="Your Email" required>
       <textarea id="contactMessage" placeholder="Your Message" required></textarea>
       <button type="submit" class="send-btn">Send Message</button>
     </form>
-    <div class="contact-socials">
-      <a href="https://facebook.com" target="_blank"><img src="fb1.png" alt="Facebook"></a>
-      <a href="https://instagram.com" target="_blank"><img src="ig.png" alt="Instagram"></a>
-      <a href="https://twitter.com" target="_blank"><img src="twit.webp" alt="Twitter"></a>
-    </div>
-  </div>
+
+<!-- Social Media Icons -->
+<div class="contact-socials">
+  <a href="https://facebook.com" target="_blank">
+    <img src="fb1.png" alt="Facebook">
+  </a>
+  <a href="https://instagram.com" target="_blank">
+    <img src="ig.png" alt="Instagram">
+  </a>
+  <a href="https://twitter.com" target="_blank">
+    <img src="twit.webp" alt="Twitter">
+  </a>
 </div>
 
-<!-- CONTACT TOAST -->
+  </div>
+</div>
+<!-- Toast for Contact Submission -->
 <div id="contactToast" class="toast hidden">Message sent successfully!</div>
+
+ 
 
 <script src="script.js"></script>
 </body>
-</html>
-
