@@ -5,7 +5,10 @@ function filter(category) {
       item.style.display = "block";
       return;
     }
-    item.style.display = item.classList.contains(category) ? "block" : "none";
+
+    item.style.display = item.classList.contains(category)
+      ? "block"
+      : "none";
   });
 }
 
@@ -36,9 +39,11 @@ document.getElementById("loginSection").addEventListener("submit", function (e) 
   }
 
   alert("LOG-IN SUCCESSFULLY!");
+
   this.reset();
   closeModal();
 });
+
 
 // ===================== SIGN UP =====================
 document.getElementById("signupSection").addEventListener("submit", function (e) {
@@ -53,9 +58,11 @@ document.getElementById("signupSection").addEventListener("submit", function (e)
   }
 
   alert("SIGN-UP SUCCESSFULLY!");
+
   this.reset();
   closeModal();
 });
+
 
 // ===================== TOAST FOR ADD TO CART =====================
 const toast = document.getElementById('toast');
@@ -89,6 +96,7 @@ if (contactForm && contactToast) {
       return;
     }
 
+    // show success toast
     contactToast.classList.remove("hidden");
     contactToast.classList.add("show");
 
@@ -97,6 +105,7 @@ if (contactForm && contactToast) {
       contactToast.classList.add("hidden");
     }, 2500);
 
+    // clear form
     contactForm.reset();
     closeModal();
   });
