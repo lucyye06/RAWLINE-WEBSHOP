@@ -1,8 +1,6 @@
-/* ==========================================
-   FULL CSS – RESPONSIVE + MODALS FIXED
-   ========================================== */
-
-/* GENERAL RESET */
+/* ===============================
+   GENERAL RESET
+   =============================== */
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +8,8 @@
   box-sizing: border-box;
 }
 
-body, html {
-  overflow-x: hidden; /* Prevent horizontal gap on mobile */
+body {
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 /* PAGE BACKGROUNDS */
@@ -19,7 +17,9 @@ body.home-page { background-color: #05020291; }
 body.shop-page { background-color: #000000; }
 body.about-page { background-color: #ffffff; }
 
-/* HEADER */
+/* ===============================
+   HEADER
+   =============================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -29,7 +29,7 @@ header {
   top: 0;
   background: rgba(0, 0, 0, 0.996);
   color: rgb(198, 185, 185);
-  z-index: 10;
+  z-index: 1000; /* ensure above everything */
   font-weight: bold;
 }
 
@@ -51,10 +51,7 @@ header {
   opacity: 0.8;
 }
 
-header h1 {
-  font-size: 24px;
-  letter-spacing: 2px;
-}
+header h1 { font-size: 24px; letter-spacing: 2px; }
 
 nav a {
   color: rgb(195, 192, 192);
@@ -66,7 +63,9 @@ nav a {
 
 nav a:hover { color: #aa1414; }
 
-/* HOME HERO */
+/* ===============================
+   HERO SECTION
+   =============================== */
 .home-hero {
   height: 100vh;
   background: url("street.jpg") center/cover no-repeat;
@@ -128,25 +127,6 @@ nav a:hover { color: #aa1414; }
   z-index: 1;
 }
 
-.shop-now-btn::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: -6px;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #1d100e;
-  z-index: -1;
-  transition: all 0.3s ease;
-}
-
-.shop-now-btn:hover::before {
-  top: -2px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-}
-
 .shop-now-btn:hover {
   transform: scale(1.05);
   background-color:#ffffff;
@@ -160,94 +140,47 @@ nav a:hover { color: #aa1414; }
 
 .raw-red { color: rgb(157, 9, 9); }
 
-/* ==========================================
+/* ===============================
    ABOUT SECTION
-   ========================================== */
+   =============================== */
 .about-section {
   min-height: 80vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: center;
-  padding: 40px 20px;
-  background: url("images/about-bg.jpg") center/cover no-repeat;
-  position: relative;
-}
-
-.about-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.651);
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .about-overlay {
-  position: relative;
-  z-index: 2;
-  flex: 1 1 400px;
   max-width: 500px;
-  padding: 20px;
-  text-align: left;
+  z-index: 2;
   color: white;
-  animation: fadeIn 1s ease;
 }
 
-.about-section img {
-  flex: 1 1 300px;
-  max-width: 100%;
-  height: auto;
+.about-overlay h2 { font-size: 36px; margin-bottom: 20px; }
+
+.about-box p { font-size: 16px; line-height: 1.6; }
+
+.about-image {
+  max-width: 400px;
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
   border-radius: 12px;
-  margin-left: 20px;
+  object-fit: cover;
 }
 
-.about-overlay h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-}
-
-.about-box p {
-  font-size: 18px;
-  line-height: 1.8;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-}
-
-/* ==========================================
+/* ===============================
    CATEGORIES & PRODUCTS
-   ========================================== */
-#categories h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.category-buttons {
-  text-align: center;
-  margin: 20px;
-}
-
-.category-buttons button {
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  background-color: rgba(242, 231, 231, 0.571);
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.category-buttons button:hover {
-  transform: scale(1.05);
-  background-color: #686666;
-  color: #fff;
-}
-
+   =============================== */
 #categories {
-  background: url("str.jpeg") center center no-repeat;
+  background: url("str.jpeg") center/cover no-repeat;
   background-size: cover;
+  background-attachment: scroll;
   position: relative;
   padding: 60px 20px;
 }
@@ -270,9 +203,9 @@ nav a:hover { color: #aa1414; }
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 15px;
-  padding: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
 
 .product {
@@ -280,43 +213,20 @@ nav a:hover { color: #aa1414; }
   background: #fff;
   padding: 10px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
 }
 
 .product img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  min-height: 180px;
+  aspect-ratio: 3/4;
+  min-height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.3s ease;
 }
 
-.product img:hover { transform: scale(1.05); }
-
-.product-name {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  margin: 8px 0 4px 0;
-  color: #333;
-}
-
-.product p {
-  background: rgba(0, 0, 0, 0.522);
-  padding: 2px 5px;
-  border-radius: 4px;
-  display: inline-block;
-  color: #000;
-}
+.product-name { font-size: 16px; font-weight: bold; color: #333; margin: 8px 0 4px 0; }
+.product p { color: #000; background: rgba(255,255,255,0.7); padding: 2px 5px; border-radius: 4px; }
 
 .product button {
   padding: 8px 16px;
@@ -326,114 +236,118 @@ nav a:hover { color: #aa1414; }
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.product button:hover {
-  background-color: #524e4e;
-  transform: scale(1.05);
-}
+.product button:hover { background-color: #524e4e; transform: scale(1.05); }
 
-.tag {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgb(255, 0, 0);
-  color: #fff;
-  padding: 5px;
-  font-size: 12px;
-  border-radius: 4px;
-}
-
-.hidden { display: none !important; }
-
-/* ==========================================
-   LOGIN & CONTACT MODALS
-   ========================================== */
+/* ===============================
+   MODALS (Login & Contact)
+   =============================== */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: none; /* hidden by default */
+  background: rgba(0,0,0,0.7);
+  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* above everything */
+  z-index: 2000; /* higher than header */
+  overflow-y: auto;
+  padding: 20px;
 }
 
 .login-card,
 .contact-card {
-  position: relative;
-  z-index: 10000; /* above overlay */
-  animation: fadeIn 0.5s ease;
-}
-
-.login-card {
+  width: 100%;
+  max-width: 400px;
   background: #000000b0;
-  width: 360px;
-  padding: 25px;
   border-radius: 10px;
-  text-align: center;
+  padding: 25px;
+  position: relative;
+  animation: loginSlideUp 0.8s ease;
 }
 
-.contact-card {
-  background: #0c0b0be9;
-  width: 400px;
-  max-width: 90%;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
+.contact-card { background: #0c0b0be9; }
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
 }
 
-/* Close buttons */
-.close, .close-x, .close-contact {
+.modal input:focus,
+.modal textarea:focus { outline: none; border-color: #1877f2; }
+
+.close, .close-contact {
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 22px;
   cursor: pointer;
-  color: #000;
+  color: #fff;
   transition: 0.3s;
 }
-.close:hover, .close-x:hover, .close-contact:hover {
-  transform: scale(1.2);
-  color: #fff;
+
+.close:hover, .close-contact:hover { transform: scale(1.2); }
+
+/* Login buttons */
+.login-btn,
+.signup-btn,
+.send-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-/* ==========================================
-   MEDIA QUERIES – MOBILE RESPONSIVE
-   ========================================== */
-@media screen and (max-width: 768px) {
-  header { flex-direction: column; align-items: center; padding: 15px 20px; gap: 10px; }
-  .header-left { gap: 10px; }
-  nav { flex-wrap: wrap; justify-content: center; margin-top: 10px; }
-  nav a { font-size: 14px; margin: 5px 10px; }
+.login-btn { background: #1877f2; color: #fff; }
+.login-btn:hover { background: #166fe5; }
 
-  .home-hero { min-height: 60vh; padding: 40px 20px; filter: brightness(0.9); text-align: center; }
-  .home-overlay h1 { font-size: clamp(24px, 8vw, 48px); }
-  .hero-text { font-size: clamp(16px, 5vw, 32px); }
-  .shop-now-btn { font-size: clamp(14px, 4vw, 18px); padding: 10px 20px; }
+.signup-btn { background: #42b72a; color: #fff; }
+.signup-btn:hover { background: #36a420; }
 
-  .about-section { flex-direction: column; align-items: center; padding: 20px 10px; }
-  .about-overlay { text-align: center; max-width: 90%; margin-bottom: 20px; }
-  .about-section img { margin-left: 0; width: 90%; max-width: 300px; }
+.send-btn { background: #1877f2; color: #fff; }
+.send-btn:hover { background: #166fe5; }
 
-  .products { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
-  .product img { min-height: 140px; }
+/* Modal animations */
+@keyframes loginSlideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-@media screen and (max-width: 480px) {
-  header { padding: 10px 15px; gap: 8px; }
-  nav a { font-size: 12px; margin: 4px 8px; }
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media screen and (max-width:1024px){
+  header { flex-direction: column; padding: 15px 20px; gap:10px; }
+  nav { flex-wrap: wrap; justify-content:center; margin-top:10px; }
+  nav a { margin: 5px 10px; font-size:14px; }
 
-  .home-overlay h1 { font-size: clamp(20px, 8vw, 36px); }
-  .hero-text { font-size: clamp(14px, 5vw, 24px); }
+  .about-section { flex-direction: column; padding: 40px 20px; gap:20px; }
+  .about-overlay { max-width: 100%; text-align: center; }
+  .about-image { max-width: 100%; }
 
-  .products { grid-template-columns: 1fr; gap: 8px; }
-  .product img { min-height: 120px; }
+  .products { grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:15px; }
+  .product img { min-height: 180px; }
+  .product-name { font-size: 14px; }
+  .product p { font-size: 12px; }
+}
 
-  .about-overlay { width: 95%; font-size: 14px; }
-  .about-section img { width: 95%; margin-left: 0; }
+@media screen and (max-width:480px){
+  nav a { font-size:12px; margin:4px 8px; }
+  .about-overlay h2 { font-size:24px; }
+  .about-box p { font-size:13px; line-height:1.4; }
+  .products { grid-template-columns:1fr; }
+  .product img { min-height:160px; }
+  .product button { width:100%; }
 }
